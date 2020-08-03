@@ -1,0 +1,16 @@
+#<h1>Someone spilled the tea !</h1> 
+
+
+    <div class="card text-center">
+        <div class="card-header">
+            Someone spilled the tea !
+        </div>
+        <div class="card-body">
+        <h5><%= params[:gossip].title %></h5>
+        <p class="card-text"><%= params[:gossip].content %></p>
+        <%=link_to "Check out the source", show_user_path(:id => params[:gossip].user.id), :class => "card-text" %>
+        </div>
+    <div class="card-footer text-muted">
+    <%= params[:gossip].created_at %>
+    </div>
+    </div>
