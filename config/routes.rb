@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get "show_user/:id", to: "dynamic_pages#show_user", as: "show_user"
   get "dynamic_pages/show_user"
 
+  get "welcome/:id", to: "dynamic_pages#welcome", as: "welcome"
+  get "dynamic_pages/welcome"
 
 end

@@ -1,24 +1,53 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Une application the_gossip_project qui affiche quelques pages statiques, un système de landing pages personnalisées, un index et un show de potins. Le tout avec Bootstrap et un header qui a les bons liens.
 
-Things you may want to cover:
+Ruby version 2.7.0
 
-* Ruby version
+Exercice THP validant : Créer une base de données pour une application de "Gossip".
 
-* System dependencies
+Pour démarrer le programme :
 
-* Configuration
+bundle install
 
-* Database creation
+rails db:migrate
 
-* Database initialization
+rails db:seed
 
-* How to run the test suite
+rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+Dans votre navigateur, allez à localhost/3000/index
 
-* Deployment instructions
+Le pitch
 
-* ...
+On va poser les bases de notre fameux Gossip Project pour le transcrire en Rails. La première étape est la modélisation de sa BDD ! Le parcours utilisateur est le suivant : sur ce super réseau social, un utilisateur va s'inscrire, renseigner son prénom et nom, son mail et son age, puis il précisera sa ville avec une recherche par code postal.
+
+L'utilisateur pourra donc rechercher les potins par ville, par utilisateurs, par date (plus récent ou plus ancien), par nombre de likes, par tags, pour trouver les potins les plus croustillants.
+
+LES USERS
+
+Un first_name, qui est un string
+Un last_name, qui est un string
+Un description, qui est un text
+Un email, qui est un string
+Un age, qui est un integer
+
+
+LES VILLES
+
+Un utilisateur appartient à une seule ville mais une ville peut contenir plusieurs utilisateurs.
+
+LES GOSSIPS
+
+Un title, qui est un string
+Un content, qui est un text
+
+Un utilisateur peut écrire plusieurs gossips mais un gossip ne peut être écrit que par un seul utilisateur.
+
+LES TAGS
+
+Un gossip peut avoir plusieurs tags et un tag peut être présent sur plusieurs gossips.
+
+LES MESSAGES PRIVÉS
+
+Un PM aura un expéditeur et un (ou plusieurs) destinataires.
